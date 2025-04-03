@@ -27,22 +27,20 @@ add_filter( 'presspermit_options', 'pp_multisite_settings_forced_options', 99 );
 
 function pp_multisite_settings_forced_options( $def_options ) {
 
-	// NOT CURRENTLY NEEDED, BUT LEFT HERE FOR FUTURE USE
-	// $def_options['presspermit_enabled_post_types'] = array(
-	// 	'post' => 1,
-	// 	'page' => 1,
-	// 	'attachment' => 1,
-	// 	'wp_navigation' => 1,
-	// 	'differentiator' => 1,
-	// 	'identity-support' => 1,
-	// 	'student-timeline' => 1,
-	// 	'news' => 1,
-	// 	'organization' => 1,
-	// 	'pathway' => 1,
-	// 	'focus-area' => 1,
-	// 	'program' => 1,
-	// 	'program' => 1,
-	// );
+	$def_options['presspermit_enabled_post_types'] = array(
+		'post' => 1,
+		'page' => 1,
+		'attachment' => 0,
+		'wp_navigation' => 1,
+		'differentiator' => 1,
+		'identity-support' => 1,
+		'student-timeline' => 1,
+		'news' => 1,
+		'organization' => 1,
+		'pathway' => 1,
+		'focus-area' => 1,
+		'program' => 1,
+	);
 
 	// $def_options['presspermit_enabled_taxonomies'] = array(
 	// 	'category' => 1,
@@ -50,6 +48,8 @@ function pp_multisite_settings_forced_options( $def_options ) {
 	// 	'news_type' => 1,
 
 	// );
+
+	$def_options['presspermit_display_branding'] = 0;
 
 	// Force media access options
 	$def_options['presspermit_admin_others_unattached_files'] = 1;
